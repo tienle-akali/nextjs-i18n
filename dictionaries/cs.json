@@ -1,6 +1,7 @@
 {
   "hello": {
-    "client": "Hello client cs"
+    "client": "Hello from client cs",
+    "server": "Hello from server cs"
   },
   "server-component": {
     "welcome": "Vítejte"

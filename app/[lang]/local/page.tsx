@@ -6,7 +6,9 @@ export default function Local() {
 
   return (
     <div>
-      <p>{t("client")}</p>
+      <p>
+        <b>{t("client")}</b>
+      </p>
     </div>
   );
 }

@@ -2,11 +2,11 @@ import Link from "next/link";
 
 const menu = [
   {
-    label: "Home",
+    label: "Home (Server page)",
     path: "",
   },
   {
-    label: "Local",
+    label: "Client page",
     path: "local",
   },
 ];
