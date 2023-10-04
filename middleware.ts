@@ -59,11 +59,11 @@ export function middleware(request: NextRequest) {
   }
 }
 
-const defaultLocales = [...i18n.locales];
+const i18nLocales = [...i18n.locales];
 
 export default createMiddleware({
   // A list of all locales that are supported
-  locales: defaultLocales,
+  locales: i18nLocales,
 
   // If this locale is matched, pathnames work without a prefix (e.g. `/about`)
   defaultLocale: i18n.defaultLocale,
