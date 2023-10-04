@@ -1,4 +1,7 @@
 {
+  "hello": {
+    "client": "Hello client de"
+  },
   "server-component": {
     "welcome": "Willkommen"
   },
