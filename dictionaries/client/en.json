@@ -1,0 +1,11 @@
+{
+  "user": {
+    "editor": {
+      "title": "Composer",
+      "placeholder": "Type something!",
+      "save": "Save",
+      "close": "Close",
+      "yourInput": "Your input"
+    }
+  }
+}

@@ -1,10 +1,6 @@
 import { NextIntlClientProvider } from "next-intl";
 import { getDictionary } from "../../../get-dictionary-multiple";
 
-const getDict = async ({ lang }: { lang: string }) => {
-  return await getDictionary("feed", lang);
-};
-
 export default async function Root({
   children,
   params: { lang },
@@ -12,7 +8,7 @@ export default async function Root({
   children: React.ReactNode;
   params: { lang: string };
 }) {
-  const dictionary = await getDict({ lang });
+  const dictionary = await getDictionary("feed", lang);
 
   return (
     <div>

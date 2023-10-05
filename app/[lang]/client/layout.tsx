@@ -1,5 +1,20 @@
-export default function Root({ children }: { children: React.ReactNode }) {
-  return <div>{children}</div>;
+import { NextIntlClientProvider } from "next-intl";
+import { getDictionary } from "../../../get-dictionary-multiple";
+
+export default async function Root({
+  children,
+  params: { lang },
+}: {
+  children: React.ReactNode;
+  params: { lang: string };
+}) {
+  const dictionary = await getDictionary("client", lang);
+
+  return (
+    <NextIntlClientProvider locale={lang} messages={dictionary}>
+      {children}
+    </NextIntlClientProvider>
+  );
 }
 
 export const metadata = {

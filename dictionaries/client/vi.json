@@ -1,0 +1,11 @@
+{
+  "user": {
+    "editor": {
+      "title": "Soạn thảo",
+      "placeholder": "Hãy viết một vài thứ gì đó!",
+      "save": "Lưu",
+      "close": "Đóng",
+      "yourInput": "Nhập liệu của bạn"
+    }
+  }
+}

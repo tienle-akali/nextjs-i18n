@@ -11,7 +11,7 @@ export const getDictionary = async (projectName: string, locale: string) => {
   try {
     return {
       ...(await getProjectDictionary("common", locale)),
-      ...(await getProjectDictionary(projectName, locale)),
+      ...(projectName ? await getProjectDictionary(projectName, locale) : {}),
     };
   } catch (error) {
     // return default home dictionary

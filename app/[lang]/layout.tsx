@@ -15,14 +15,17 @@ export default async function Root({
   params: { lang: string };
 }) {
   const dictionary = await getDictionary("common", lang);
+  console.log(dictionary);
 
   return (
     <html lang={lang}>
-      <body>
+      <body style={{ margin: 0 }}>
         <NextIntlClientProvider locale={lang} messages={dictionary}>
-          <TopAppbar lang={lang} />
+          <main style={{ maxWidth: 960, margin: "auto", padding: `0px 16px` }}>
+            <TopAppbar lang={lang} />
 
-          {children}
+            {children}
+          </main>
         </NextIntlClientProvider>
       </body>
     </html>
