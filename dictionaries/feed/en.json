@@ -1,0 +1,8 @@
+{
+  "home": {
+    "title": {
+      "client": "Feed Title client EN: {number, plural, =0 {no number} =1 {# number} other {# numbers}}",
+      "server": "Feed Title server EN: {number, plural, =0 {no number} =1 {# number} other {# numbers}}"
+    }
+  }
+}

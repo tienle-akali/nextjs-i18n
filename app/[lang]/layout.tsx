@@ -1,8 +1,7 @@
-import { i18n } from "../../i18n-config";
 import { NextIntlClientProvider } from "next-intl";
-import { notFound } from "next/navigation";
+import { getDictionary } from "../../get-dictionary-multiple";
+import { i18n } from "../../i18n-config";
 import TopAppbar from "./components/appbar";
-import LocaleSwitcher from "./components/locale-switcher";
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
@@ -10,24 +9,19 @@ export async function generateStaticParams() {
 
 export default async function Root({
   children,
-  params,
+  params: { lang },
 }: {
   children: React.ReactNode;
   params: { lang: string };
 }) {
-  let messages;
-  try {
-    messages = (await import(`../../dictionaries/${params.lang}.json`)).default;
-  } catch (error) {
-    notFound();
-  }
+  const dictionary = await getDictionary("common", lang);
 
   return (
-    <html lang={params.lang}>
+    <html lang={lang}>
       <body>
-        <NextIntlClientProvider locale={params.lang} messages={messages}>
-          <LocaleSwitcher />
-          <TopAppbar lang={params.lang} />
+        <NextIntlClientProvider locale={lang} messages={dictionary}>
+          <TopAppbar lang={lang} />
+
           {children}
         </NextIntlClientProvider>
       </body>

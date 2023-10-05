@@ -3,9 +3,6 @@
     "client": "Hello from client EN",
     "server": "Hello from server EN"
   },
-  "server-component": {
-    "welcome": "Welcome"
-  },
   "counter": {
     "increment": "Increment",
     "decrement": "Decrement"

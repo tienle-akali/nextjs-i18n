@@ -1,0 +1,8 @@
+{
+  "home": {
+    "title": {
+      "client": "Tiêu đề client VI: {number, plural, =0 {không có số nào} =1 {# số} other {# số nhiều}}",
+      "server": "Tiêu đề server VI: {number, plural, =0 {không có số nào} =1 {# số} other {# số nhiều}}"
+    }
+  }
+}

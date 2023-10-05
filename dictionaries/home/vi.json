@@ -1,0 +1,10 @@
+{
+  "hello": {
+    "client": "Hello from client VI",
+    "server": "Hello from server VI"
+  },
+  "counter": {
+    "increment": "Tăng",
+    "decrement": "Giảm"
+  }
+}
