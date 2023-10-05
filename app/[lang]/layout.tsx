@@ -15,7 +15,6 @@ export default async function Root({
   params: { lang: string };
 }) {
   const dictionary = await getDictionary("common", lang);
-  console.log(dictionary);
 
   return (
     <html lang={lang}>
